@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BSOFT Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>BSOFT</h1>
+    <p class="quote">"Shaping Skills, Building Futures"</p>
+
+    <h2>Student Registration Form</h2>
+
+    <form action="/submit" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+
+        <select name="course" required>
+            <option value="">Select Course</option>
+            <option value="Python Full Stack">Python Full Stack</option>
+            <option value="Java Full Stack">Java Full Stack</option>
+            <option value="AWS & DevOps">AWS & DevOps</option>
+            <option value="Data Science">Data Science</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
